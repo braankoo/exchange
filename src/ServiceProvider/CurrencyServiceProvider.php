@@ -14,7 +14,12 @@ class CurrencyServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        
+        /*
+         * Optional methods to load your package assets
+         */
+
+         $this->loadViewsFrom(__DIR__.'/../resources/views', 'currency');
+
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
