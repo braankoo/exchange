@@ -14,7 +14,14 @@ class CurrencyServiceProvider extends ServiceProvider
     public function boot()
     {
 
+        
+        if ($this->app->runningInConsole()) {
 
+            $this->publishes([
+                __DIR__.'/../resources/assets' => public_path('vendor/currency'),
+            ], 'assets');
+
+        }
     }
 
     /**
