@@ -23,6 +23,8 @@ Please publish all assets ```php artisan vendor:publish --provider="BrankoDragov
 
 Cache routes ```php artisan route:cache ```
 
+Please change ```"minimum-stability": "dev"``` in composer.json
+
 ## Usage
 Use as facade
 ```
